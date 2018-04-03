@@ -1,0 +1,23 @@
+<html>
+<head>
+<body>
+        <h1>titulo</h1>
+<script>
+
+	var codigoCompleto= '000012345333,000012345345, 00001234536 3, 00001234532 4, 00001234533 4, 00001234536 0, 00001234534 6';
+	document.write("<br>Los codigos originales son: "+codigoCompleto);
+	var codigoCompleto= codigoCompleto.replace(/\s/g,  ''); // se eliminan los espacios en blanco
+	var separaElementos = codigoCompleto.split(","); // separa los elementos por comas
+	document.write("<br>Hay: " + separaElementos.length + " elementos."); // cuenta el numero de elementos
+	document.write("<br>Estos son los codigos sin digito verificador: ");
+	for (var i=0; i < separaElementos.length; i++) // Itera sobre los elementos
+	{
+		document.write(separaElementos[i].slice(0, -1)+ ", "); // imprime en pantalla cada elemento y con slice se muestra del elemento 0 al penultimo elemento
+		
+	}  
+
+</script>
+
+</html>
+</head>
+</body>

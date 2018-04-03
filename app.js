@@ -106,3 +106,86 @@ console.log(puntaje);
 
 console.log(a)
 var a = 'hola'
+
+// tipos de datos primitivos
+
+var a = 'cadena',
+    b = 2,
+    c = 30.32;
+
+// boolean
+var booleano = null;
+// undefined
+// null
+
+//  tipos de datos de referencia
+// arreglo
+
+var arr = [1,2,3,4];
+console.log(arr.indexOf(6))
+
+// objetos
+var obj = {}
+
+obj.propiedad = 1;
+obj.prop2 = 'cadena';
+
+// fechas
+var fecha = new Date()
+
+console.log(typeof(fecha))
+
+// Operadores de comparacion
+
+var num1 = 2;
+var num2 = 4;
+var num3 = '4';
+
+console.log(num1 < num2)
+console.log(num1 > num2)
+
+console.log(num2 !== num3)
+
+
+let numero1 = "50",
+    numero2 = 10,
+    numero3 = 'tres';
+
+
+console.log(numero1 + numero2);
+
+console.log(Number(numero1) + numero2);
+console.log(parseInt(numero1) + numero2);
+
+
+console.log(numero1 + numero2);
+console.log(numero1 - numero2);
+
+
+
+// Otras conversiones
+
+let dato = "20";
+dato = Number("20");
+dato = Number("20.20102");
+dato = Number(true);
+dato = Number(false);
+dato = Number(null);
+dato = Number("hola Mund");
+dato = Number([1,2,3,4]);
+
+// ParseInt y ParseFloat
+dato = parseInt("100");
+dato = parseInt("100.20");
+dato = parseFloat("100.20");
+
+
+console.log(dato);
+console.log(typeof dato);
+
+
+// ToFixed solo aplica en numeros
+let numero1 = "1209139";
+let numero2 = 1209139.101213;
+console.log(numero1.toFixed(4) );
+console.log(numero2.toFixed(4) );

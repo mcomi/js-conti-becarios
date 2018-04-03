@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var strCbs = '00001234533 3, 00001234534 5, 00001234536 3, 00001234532 4, 00001234533 4, 00001234536 0, 00001234534 6';
+        var arrCbsConDigitoVerificador = strCbs.split(',');
+        var arrCbsSinDigito = arrCbsConDigitoVerificador.map(cb => cb.trim().slice(0,-2))
+        var arrBaseDatos = ['00001234533 3','00001234533 2']
+        // recibo cb desde el navegador
+        var cbABuscar = prompt('Dame un código de barras');    
+        // 1ra condicion que sea numero
+        if(!isNaN(cbABuscar)){
+            document.write('Si es un número<br>')
+            if(cbABuscar.length == 11){
+                document.write('Tiene la longitud correcta<br>')
+                if(arrCbsSinDigito.indexOf(cbABuscar) > -1){
+                    document.write('Es un código correcto')
+                }else{
+                    document.write('Lo siento, no encontramos ese código')
+                }
+            }
+            else{
+                document.write('Lo siento, debes ingresar 11 digitos')
+            }
+        }else{
+            document.write('Debes ingresar un número')
+        }
+    </script>
+</body>
+</html>
